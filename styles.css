@@ -1,0 +1,128 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.container {
+    margin-top: 10vh;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px #00000040;
+}
+
+#display {
+    font-size: 3em;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px 60px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
+    margin: 20px auto;
+    display: inline-block;
+    letter-spacing: 2px;
+    transition: all 0.2s ease-in-out;
+}
+
+#display:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+button {
+    background-color: #ffffff10;
+    color: #fff;
+    border: 2px solid #ffffff50;
+    border-radius: 30px;
+    padding: 12px 24px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover {
+    background-color: #ffffff30;
+    transform: scale(1.05);
+    box-shadow: 0 0 12px #fff;
+}
+
+button::after {
+    content: '';
+    background: rgba(255, 255, 255, 0.3);
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s;
+    border-radius: 50%;
+}
+
+button:active::after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+}
+
+#laps {
+    margin-top: 35px;
+    list-style: none;
+    padding: 0;
+    max-width: 500px;
+    margin-inline: auto;
+}
+
+#laps li {
+    background-color: rgba(255, 255, 255, 0.15);
+    margin: 10px 0;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+}
+
+#laps li:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-3px);
+}
+
+/* Responsive for mobile */
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    #display {
+        font-size: 2em;
+        padding: 20px 30px;
+    }
+
+    button {
+        font-size: 0.9em;
+        padding: 10px 18px;
+    }
+
+    #laps li {
+        font-size: 0.9em;
+    }
+}
